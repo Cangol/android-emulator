@@ -10,4 +10,3 @@ RUN chmod u+x ${SDK_HOME}/bin/android-wait-for-emulator
 RUN echo yes | $ANDROID_HOME/tools/bin/avdmanager create avd --force --name test -k  $ANDROID_IMAGES --device "Nexus 4" --sdcard 500M
 
 RUN ${ANDROID_HOME}/tools/emulator -avd test -noaudio -no-window -gpu off &
-RUN adb wait-for-device shell 'while [[ -z $(getprop sys.boot_completed) ]]; do sleep 1; done; input keyevent 82'
