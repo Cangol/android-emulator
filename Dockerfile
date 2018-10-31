@@ -12,3 +12,4 @@ RUN ${ANDROID_HOME}/platform-tools/adb kill-server
 RUN ${ANDROID_HOME}/platform-tools/adb start-server
 RUN ${ANDROID_HOME}/tools/emulator -avd test -noaudio -no-window &
 RUN android-wait-for-emulator
+RUN adb shell input keyevent 82 &
