@@ -2,7 +2,7 @@ FROM cangol/android-gradle
 LABEL MAINTAINER Cangol  <wxw404@gmail.com>
 
 # android sdk|build-tools|image
-ENV ANDROID_IMAGES="system-images;android-22;google_apis;x86_64"   
+ENV ANDROID_IMAGES="system-images;android-28;google_apis;x86_64"   
 RUN echo yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 RUN echo yes | $ANDROID_HOME/tools/bin/sdkmanager ${ANDROID_IMAGES}
 
